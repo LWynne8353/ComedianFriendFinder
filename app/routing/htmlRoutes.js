@@ -1,5 +1,5 @@
 //Creating the "path" to server.js
-var path = require("path");
+var path = require('path');
 
 //gets request for html
 module.exports = function (app) {
@@ -15,7 +15,7 @@ module.exports = function (app) {
     });
 
     // If no matching route is found default to home
-    app.get("*", function (req, res) {
+    app.use("*", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 };
