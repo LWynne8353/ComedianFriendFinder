@@ -1,12 +1,11 @@
-var surveyData = require("../data/surveyData");
-var comedianData = require("../data/comedianfriends")
+var comedians = require("../data/comedianfriends")
 
 module.exports =(function(app){
 
-    app.get("/api/survey", function(req, res){
-        res.json(surveyData)
+    app.post("/api/survey", function(req, res){
+        res.json(req.body)
     });
     app.get("/api/comedianfriends", function (req, res){
-        res.json(comedianData)
+        res.json(comedians)
     });
 })
