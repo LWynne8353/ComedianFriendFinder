@@ -2,7 +2,7 @@ var comedians = require("../data/comedianfriends")
 
 module.exports =(function(app){
 
-    app.post("/api/friends", function(req, res){
+    app.post("/api/comedianfriends", function(req, res){
         // 6. Determine the user's most compatible friend using the following as a guide:
 
         // * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
@@ -21,24 +21,28 @@ module.exports =(function(app){
       var userData = req.body
       var userScores = userData.scores
       var totalDifference;
+      //for loop of comedians score 
       for (var i = 0; i< comedians.length; i++){
           var currentFriend = comedians[i]
           totalDifference = 0
+          //for loop of user score
           for ( var j = 0; j< currentFriend.scores.length; j++){
               var currentFriendScore = currentFriend.scores[j];
               var currentUserScore = userScores[j];
               totalDifference += Math.abs(parseInt(currentUserScore)-parseInt(currentFriendScore));
           }
+          //retreive result from the loop score difference
           if (totalDifference <= bestMatch.friendDifference){
               bestMatch.name = currentFriend.name
               bestMatch.photo = currentFriend.photo
               bestMatch.friendDifference = totalDifference
           }
       }
+      //adding User
       comedians.push(userData)
         res.json(bestMatch)
     });
-    app.get("/api/friends", function (req, res){
+    app.get("/api/comedianfriends", function (req, res){
         res.json(comedians)
     });
 })

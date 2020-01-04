@@ -17,13 +17,14 @@ $('#submit').on("click", function (event) {
             $("#dropdownMenu10").val()
         ]
     }
+    console.log(userData)
     $.post("/api/friends", userData, function(data){
         $("#match-name").text(data.name);
         $("#match-img").attr("src", data.photo);
         $("#results-modal").modal("toggle");
     })
 });
- 
+
     // Add on submit button click jquery code
 
     // Then calculate how close the new friend is to the other friends in the json file

@@ -42,3 +42,4 @@ var comedians = [{
 },
 ];
 
+module.exports = comedians;
