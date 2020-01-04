@@ -40,4 +40,5 @@ var comedians = [{
     photo: "assets/images/RussellHoward.jpg",
     scores: [3, 3, 3, 4, 5, 3, 4, 3, 4, 3]
 },
-]
+];
+
