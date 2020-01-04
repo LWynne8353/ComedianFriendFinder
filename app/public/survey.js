@@ -1,5 +1,6 @@
 $('.dropdown-toggle').dropdown();
-$('.dropdown-menu').on("click", function (event) {
+$('#submit').on("click", function (event) {
+    event.preventDefault();
     var userData = {
         name: $("#name").val(),
         photo: $("#photo").val(),
@@ -16,7 +17,7 @@ $('.dropdown-menu').on("click", function (event) {
             $("#dropdownMenu10").val()
         ]
     }
-    $.post("/api/survey", userData, function(data){
+    $.post("/api/friends", userData, function(data){
         $("#match-name").text(data.name);
         $("#match-img").attr("src", data.photo);
         $("#results-modal").modal("toggle");
