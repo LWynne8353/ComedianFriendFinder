@@ -1,8 +1,8 @@
-var comedians = require("../data/comedianfriends")
+var comedians = require("../data/friends")
 
-module.exports =(function(app){
+module.exports = function(app){
 
-    app.post("/api/comedianfriends", function(req, res){
+    app.post("/api/friends", function(req, res){
         // 6. Determine the user's most compatible friend using the following as a guide:
 
         // * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
@@ -18,6 +18,9 @@ module.exports =(function(app){
           photo: "",
           friendDifference: Infinity
       }
+      console.log(bestMatch);
+      console.log(comedians);
+      console.log(req.body);
       var userData = req.body
       var userScores = userData.scores
       var totalDifference;
@@ -39,10 +42,12 @@ module.exports =(function(app){
           }
       }
       //adding User
+      console.log(bestMatch)
       comedians.push(userData)
         res.json(bestMatch)
     });
-    app.get("/api/comedianfriends", function (req, res){
+    app.get("/api/friends", function (req, res){
+        console.log("test")
         res.json(comedians)
     });
-})
+}

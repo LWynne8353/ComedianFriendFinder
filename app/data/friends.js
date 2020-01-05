@@ -38,7 +38,7 @@ var comedians = [{
 {
     name: "Russell Howard",
     photo: "assets/images/RussellHoward.jpg",
-    scores: [3, 3, 3, 4, 5, 3, 4, 3, 4, 3]
+    scores: ["3", "3", "3", "4", "5", "3", "4", "3", "4", "3"]
 },
 ];
 

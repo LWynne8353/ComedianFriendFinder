@@ -1,4 +1,5 @@
-$('.dropdown-toggle').dropdown();
+$('.chosen.select').text();
+//$('.dropdown-menu : .chosen-select').text();
 $('#submit').on("click", function (event) {
     event.preventDefault();
     var userData = {
