@@ -22,22 +22,22 @@ var comedians = [{
 },
 {
     name: "Sarah Silverman",
-    photo: "assets\images\Sarah Silverman.jpg",
+    photo: "assets/images/Sarah Silverman.jpg",
     scores: ["3", "3", "3", "5", "5", "2", "4", "1", "5", "5"]
 },
 {
     name: "Bill Burr",
-    photo: "assets\images\Bill Burr.jpg",
+    photo: "assets/images/Bill Burr.jpg",
     scores: ["4", "3", "2", "1", "1", "5", "2", "3", "5", "5"]
 },
 {
     name: "Amy Schumer",
-    photo: "assets\images\AmySchumer.jpg",
+    photo: "assets/images/AmySchumer.jpg",
     scores: ["5", "5", "5", "5", "5", "3", "1", "5", "5", "4"]
 },
 {
     name: "Russell Howard",
-    photo: "assets\images\RussellHoward.jpg",
+    photo: "assets/images/RussellHoward.jpg",
     scores: ["3", "3", "3", "4", "5", "3", "4", "3", "4", "3"]
 },
 ];
